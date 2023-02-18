@@ -1,0 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    /* ## Colors */
+    /* ### Primary */
+    --LightRed: hsla(0, 100%, 67%);
+    --OrangeYellow: hsl(39, 100%, 56%);
+    --GreenTeal: hsl(166, 100%, 37%);
+    --CobaltBlue: hsl(234, 85%, 45%);
+    
+    /* ## Gradients */
+    --LightSlateBlue : hsl(252, 100%, 67%); /*(background)*/
+    --LightRoyalBlue : hsl(241, 81%, 54%); /*(background)*/
+    
+    --VioletBlue : hsla(256, 72%, 46%, 1); /*(circle)*/
+    --PersianBlue : hsla(241, 72%, 46%, 0); /*(circle)*/
+    
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --DarkGrayBlue: hsl(224, 30%, 27%);
+
+    /* Fuente */
+    --fuentePrincipal: 'Hanken Grotesk', sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+body{
+    font-size: 18px;
+    font-family: var(--fuentePrincipal);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+input, textarea, button, select{
+    font: inherit;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+@media (min-width: 768px){ 
+    .contenedor{
+        width: 90%;
+        margin-inline: auto;
+        max-width: 120rem;
+    }
+}
+/* Estilos personalizados */
+.card{
+    display: grid;
+}
+@media (min-width: 768px){ 
+    .card{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+}
+/* Result styles */
+.card__result{
+    background: linear-gradient(var(--LightSlateBlue), var(--LightRoyalBlue));
+    height: auto;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1rem 0;
+}
+@media (min-width: 768px){ 
+    .card__result{
+        border-radius: 2rem;
+        padding: 2rem;
+        max-width: 375px;
+        z-index: 2;
+    }
+}
+.card__p{
+    font-size: 18px;
+    color: var(--LightLavender);
+    text-align: center;
+    margin: 1rem 0;
+}
+.card__circle{
+    height: 8rem;
+    width: 8rem;
+    margin-inline: auto;
+    border-radius: 100%;
+    background: linear-gradient(var(--VioletBlue), var(--PersianBlue));
+}
+.circle{
+    display: grid;
+    place-items: center;
+}
+.circle__number{
+    font-size: 42px;
+    color: var(--White);
+    text-align: center;
+    font-weight: 800;
+}
+.circle__span{
+    display: block;
+    font-size: 12px;
+    color: var(--LightLavender);
+    font-weight: 500;
+}
+.card__title{
+    margin-top: 1rem;
+    color: var(--White);
+    font-size: 28px;
+    text-align: center;
+}
+.card__span{
+    display: block;
+}
+/* Summary styles */
+.card__summary{
+    width: 90%;
+    margin-inline: auto;
+}
+@media (min-width: 768px){ 
+    .card__summary{
+        padding: 2rem 2rem 2rem 4rem;
+        box-shadow: 0px 2px 5px 0px rgba(160,219,219,0.75);
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(160,219,219,0.75);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(160,219,219,0.75);
+        max-width: 375px;
+        margin: 0;
+        margin-left: -2rem;
+        z-index: 1;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+}
+.summary__title{
+    color: var(--DarkGrayBlue);
+    text-align: left;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 1rem 0;
+}
+.summary__div{
+    padding: 15px;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 30px 1fr 70px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.summary__div::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    filter: opacity(7%);
+    border-radius: inherit;
+}
+.summary__div--Reaction::after{
+    background-color: var(--LightRed);
+}
+.summary__div--Memory::after{
+    background-color: var(--OrangeYellow);
+}
+.summary__div--Verbal::after{
+    background-color: var(--GreenTeal);
+}
+.summary__div--Visual::after{
+    background-color: var(--CobaltBlue);
+}
+.summary__p{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.summary__p--Reaction{
+    color: var(--LightRed);
+}
+.summary__p--Memory{
+    color: var(--OrangeYellow);
+}
+.summary__p--Verbal{
+    color: var(--GreenTeal);
+}
+.summary__p--Visual{
+    color: var(--CobaltBlue);
+}
+.summary__p--dark{
+    color: var(--DarkGrayBlue);
+}
+.summary__p--gray{
+    color: var(--DarkGrayBlue);
+    filter: opacity(60%);
+}
+.summary__btn{
+    background-color: var(--DarkGrayBlue);
+    color: var(--White);
+    border-radius: 30px;
+    display: block;
+    border: none;
+    width: 100%;
+    min-height: 45px;
+}
+.summary__btn:hover{
+    background-color: none;
+    cursor: pointer;
+    background: linear-gradient(var(--LightSlateBlue), var(--LightRoyalBlue));
+}

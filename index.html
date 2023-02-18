@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Results summary component</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="contenedor">
+  <div class="card">
+    <!-- Result part -->
+    <div class="card__result">
+      <p class="card__p">Your result</p>
+      <div class="card__circle circle">
+        <p class="circle__number">76 <span class="circle__span">of 100</span></p>
+      </div>
+      <h2 class="card__title">Great</h2>
+      <p class="card__p">
+        You score higher than 65% of the
+        <span class="card__span">people who have taken these tests.</span>
+      </p>
+    </div>
+    <!-- Summary part -->
+    <div class="card__summary summary">
+      <p class="summary__title">Summary</p>
+      <div class="summary__content">
+        <!-- Contenido generado por scripting -->
+      </div>
+      <button class="summary__btn">
+        Continue
+      </button>
+    </div>
+  </div>
+  <div class="attribution" style="margin-top: 5rem;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">David Adame Soto</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
