@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const consultarJSON = async() => {
-    const url = "/data.json";
+    const url = "./data.json";
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
     mostrarDatos(resultado);
